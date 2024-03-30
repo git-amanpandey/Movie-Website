@@ -1,0 +1,290 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s ease;
+}
+
+.app {
+  font-family: Arial, sans-serif;
+  position : relative;
+}
+  .navbar {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .navbar h1 {
+    margin: 0;
+    font-size: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: showNavbar infinite;
+    color: #f1f1f1;
+  }
+.box {
+    min-height: 100vh;
+    transition: background-color 0.5s ease;
+  }
+  .app.dark-mode .container {
+    background-color: #222;
+  }
+
+@keyframes showNavbar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: calc(100vh - 80px);
+}
+.image-box {
+    flex: .256;
+    text-align: center;
+    position: relative; 
+    overflow: hidden;
+    width: 150px; 
+    height: 350px; 
+    margin: 0 auto ;
+    border-radius: 100%; 
+    border: 2px solid #007bff; 
+  }
+  
+  img.thunder-effect {
+    animation: thunder 1.5s infinite;
+    transform-origin: center;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 1%; 
+  }
+  
+  @media screen and (max-width: 768px) {
+    .image-box {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .image-box {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+@keyframes thunder {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+    filter: brightness(100%);
+  }
+  50% {
+    transform: scale(1.1) translateY(-10px);
+    filter: brightness(160%);
+  }
+}
+.text-box {
+  flex: 1;
+ margin-left:40px;
+  max-width: 500px;
+  background-color: #fbf9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 16px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.text-box h2 {
+  margin-bottom: 1rem;
+  color: #007bff; 
+}
+
+.text-box p {
+  line-height: 1.6;
+  font-size: 16px; 
+}
+.contact-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .social-links {
+    display: inline-block;
+
+    margin: 0 10px;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+.dark-mode .box {
+  background-color: #222;
+}
+ .dark-mode .text-box {
+  background-color: #131313;
+  color: #f1f1f1;
+} 
+.dark-mode .text-box p{
+  color: #f1f1f1;
+}
+.dark-mode .social-links a img {
+  filter: invert(100%);
+} 
+  .dark-mode {
+    background-color: #333;
+    color: #f1f1f1;
+  }
+  
+  .dark-mode .navbar {
+    background-color: #131313;
+  }
+.custom-button {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #3845f9;
+  color: #f7f9fa;
+}
+.error-icon {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.dark-mode .custom-button {
+  background-color: #007bff;
+    color: #fff;
+}
+
+.dark-mode .custom-button:hover {
+  background-color: #171818;
+  color: #007bff;
+}
+
+.dark-mode .error-icon {
+  color: #fff;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-link {
+  display: inline-block;
+  margin: 0 10px;
+  position: relative;
+  color: #333;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #007bff;
+}
+
+/* Instagram Social Link Styling */
+.insta-color {
+  color: #e4405f;
+}
+
+.insta-color:hover {
+  color: #e4405f;
+}
+
+/* GitHub Social Link Styling */
+.github-color {
+  color: #333;
+}
+
+.github-color:hover {
+  color: #333;
+}
+
+/* LinkedIn Social Link Styling */
+.linkedin-color {
+  color: #0077b5;
+}
+
+.linkedin-color:hover {
+  color: #0077b5;
+}
+.tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.social-link:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+}
+.dark-mode .social-link {
+  color: #f1f1f1;
+}
+
+.dark-mode .insta-color {
+  color: #e4405f;
+}
+
+.dark-mode .github-color {
+  color: #f1f1f1;
+}
+
+.dark-mode .linkedin-color {
+  color: #0077b5;
+}
+
+.dark-mode .tooltip {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+

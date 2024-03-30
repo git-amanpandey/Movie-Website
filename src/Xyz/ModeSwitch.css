@@ -1,0 +1,26 @@
+.mode-switch {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .mode-switch img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .dark-mode {
+    background-color: #333;
+    color: #f1f1f1;
+  }
+  
+
