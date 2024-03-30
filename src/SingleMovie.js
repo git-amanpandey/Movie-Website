@@ -11,6 +11,7 @@ const SingleMovie = () => {
     return (
       <section className="movie-section ">
         <div className="loading">Just Wait....✋</div>;
+
       </section>
     );
   }
